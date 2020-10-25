@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Vehicle Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size-md="6" offset-md="3">
+
+      <ion-card-content>
+
+        <ion-card class="ion-no-margin top-margin">
+          <ion-card-header>
+            <ion-card-title>Vehicle Details</ion-card-title>
+          </ion-card-header>
+          <ion-card-content >
+    
+            <ion-item >
+              <!-- <ion-label position="floating">Vehicle RegNo</ion-label> -->
+              <ion-input name="registration_no" type="text" placeholder="Enter Vehicle RegNo" required [(ngModel)]="vehicle.registration_no" ngDefaultControl></ion-input>
+            </ion-item>
+
+          </ion-card-content>
+        </ion-card>
+
+        <ion-row class="top-margin">
+          <ion-col>
+            <ion-button type="button" color="danger" (click)="searchVehicle()" expand="block">Search</ion-button>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row *ngIf="vehicleDetailsLoaded">
+          <ion-col>
+            <ion-card class="ion-no-margin top-margin">
+              <ion-card-header>
+                <ion-card-title>Vehicle Details</ion-card-title>
+              </ion-card-header>
+              <ion-card-content >
+    
+                <ion-item>
+                  <ion-label></ion-label>
+                  <ion-text name = "registration_no" [(ngModel)]="vehicle.registration_no" ngDefaultControl></ion-text>
+                </ion-item>
+                
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "chassis_no" [(ngModel)]="vehicle.chassis_no" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "engine_no" [(ngModel)]="vehicle.engine_no" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "fitness_upto" [(ngModel)]="vehicle.fitness_upto" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "fuel_norms" [(ngModel)]="vehicle.fuel_norms" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "fuel_type" [(ngModel)]="vehicle.fuel_type" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "insurance_upto" [(ngModel)]="vehicle.insurance_upto" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "maker___model" [(ngModel)]="vehicle.maker___model" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "owner_name" [(ngModel)]="vehicle.owner_name" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "registration_date" [(ngModel)]="vehicle.registration_date" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "road_tax_paid_upto" [(ngModel)]="vehicle.road_tax_paid_upto" ngDefaultControl></ion-text>
+                </ion-item>
+
+                <ion-item >
+                  <ion-label></ion-label>
+                  <ion-text name = "vehicle_class" [(ngModel)]="vehicle.vehicle_class" ngDefaultControl></ion-text>
+                </ion-item>
+    
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+
+    </ion-col>
+  </ion-row>
+</ion-content>
